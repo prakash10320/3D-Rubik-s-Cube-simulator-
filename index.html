@@ -6,19 +6,29 @@
     <title>3D Rubik's Cube with Controls</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        body { margin: 0; overflow: hidden; }
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
         #controls {
             position: fixed;
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
         }
         button {
             padding: 10px;
-            font-size: 16px;
+            font-size: 4vw;
             cursor: pointer;
+            min-width: 60px;
+        }
+        @media (min-width: 600px) {
+            button {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
